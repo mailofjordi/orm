@@ -94,11 +94,11 @@ class Expr
      * @param mixed $x Left expression.
      * @param mixed $y Right expression.
      *
-     * @return Expr\Comparison
+     * @return Expr\Func
      */
     public function eq($x, $y)
     {
-        return new Expr\Comparison($x, Expr\Comparison::EQ, $y);
+        return new Expr\Func($x . Expr\Comparison::EQ, $y);
     }
 
     /**
